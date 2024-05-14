@@ -4,67 +4,83 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jackscv</title>
-  </head>
-  <body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
         background-color: rgb(186, 185, 185);
         height: 1000px;
+        font-family: "Oswald", "Times New Roman", Times, serif;
       }
       header {
+        /* will become a nav bar for contact shortcuts */
         height: 200px;
         width: 100%;
         position: fixed;
+        display: flex;
+        justify-content: flex-end;
       }
-      .picture {
-        position: fixed;
-        right: 0;
+      h1 {
+        display: flex;
+        justify-content: center;
       }
       .contactparent {
-        position: relative;
-        height: 220px;
+        height: 300px;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
       }
 
       .contactdetails {
-        position: absolute;
-        top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
       }
+
+      .picture {
+        align-self: flex-end;
+      }
+
       .employmentparent {
-        position: relative;
-        height: 160px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
       }
 
       .employmentp {
-        position: absolute;
-        top: 25px;
+        flex-wrap: wrap;
       }
       .employmentlist {
-        position: absolute;
-        top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
       }
       .educationparent {
-        position: relative;
-        height: 160px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
       }
 
       .educationlist {
-        position: absolute;
-        top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
       }
     </style>
-
+  </head>
+  <body>
     <main>
       <header>
         <!-- Need to insert contact shortcut buttons -->
-        <img
-          class="picture"
-          src="Jackpic.jpg"
-          alt="A picture of Jack"
-          height="200"
-        />
       </header>
       <h1>Jack Berry's CV</h1>
-      <section class="contactparent">
+      <div class="contactparent">
         <h2>Contact details</h2>
         <ul class="contactdetails">
           <li>07898819714</li>
@@ -78,7 +94,13 @@
           </li>
           <li>02/09/1991</li>
         </ul>
-      </section>
+        <img
+          class="picture"
+          src="Jackpic.jpg"
+          alt="A picture of Jack"
+          height="200"
+        />
+      </div>
       <section class="employmentparent">
         <h2>Employment History</h2>
         <p class="employmentp">
