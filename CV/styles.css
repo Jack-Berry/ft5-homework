@@ -1,0 +1,125 @@
+body {
+  background-color: rgb(186, 185, 185);
+  height: 1000px;
+  font-family: "Oswald", "Times New Roman", Times, serif;
+}
+header {
+  /* will become a nav bar for contact shortcuts */
+  /* background-color: aqua; */
+  position: relative;
+  top: 5px;
+  left: 5px;
+  padding: 20px;
+  height: 200px;
+  /* max-width: 70%; */
+  margin: auto;
+  /* position: fixed; */
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 2px white;
+}
+h1 {
+  width: 80%;
+  height: 40%;
+  text-align: center;
+  align-self: stretch;
+}
+.picture {
+  height: 200px;
+  align-self: flex-end;
+}
+.menudiv {
+  /* background-color: blue; */
+  position: absolute;
+  background-color: rgb(90, 119, 155);
+  bottom: 0px;
+  height: 50px;
+  width: 80%;
+}
+
+a {
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 50px;
+}
+
+nav a {
+  display: block;
+}
+
+nav ul {
+  position: relative;
+  margin: 0;
+  top: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  top: 0;
+  padding: 0;
+  line-height: 20px;
+}
+
+nav ul ul {
+  display: none;
+  color: white;
+  background-color: rgb(90, 119, 155);
+  /* background-color: aqua; */
+  position: absolute;
+  top: 50px;
+}
+
+nav ul ul li {
+  position: absolute;
+  display: list-item;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; */
+  list-style: none;
+  line-height: 40px;
+  /* padding-left: 25px; */
+  padding-right: 25px;
+}
+
+nav ul li:focus-within > ul,
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+.arrange {
+  display: flex;
+  flex-direction: column;
+  justify-content: spa;
+  flex-wrap: wrap;
+}
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* border: dotted 2px white; */
+}
+
+.container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+@media (min-width: 600px) {
+  .arrange {
+    flex-direction: row;
+  }
+  .container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    width: 33%;
+    text-align: left;
+  }
+}

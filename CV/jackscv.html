@@ -10,121 +10,83 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      body {
-        background-color: rgb(186, 185, 185);
-        height: 1000px;
-        font-family: "Oswald", "Times New Roman", Times, serif;
-      }
-      header {
-        /* will become a nav bar for contact shortcuts */
-        height: 200px;
-        width: 100%;
-        position: fixed;
-        display: flex;
-        justify-content: flex-end;
-      }
-      h1 {
-        display: flex;
-        justify-content: center;
-      }
-      .contactparent {
-        height: 300px;
-        width: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .contactdetails {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-      }
-
-      .picture {
-        align-self: flex-end;
-      }
-
-      .employmentparent {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-      }
-
-      .employmentp {
-        flex-wrap: wrap;
-      }
-      .employmentlist {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-      }
-      .educationparent {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-      }
-
-      .educationlist {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-      }
-    </style>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <header>
-        <!-- Need to insert contact shortcut buttons -->
-      </header>
+    <header>
       <h1>Jack Berry's CV</h1>
-      <div class="contactparent">
-        <h2>Contact details</h2>
-        <ul class="contactdetails">
-          <li>07898819714</li>
-          <li>Jackdanielberry@gmail.com</li>
-          <li>
-            The Cottage<br />
-            72 Byrons Lane<br />
-            Macclesfield<br />
-            Cheshire<br />
-            SK117JS
-          </li>
-          <li>02/09/1991</li>
-        </ul>
-        <img
-          class="picture"
-          src="Jackpic.jpg"
-          alt="A picture of Jack"
-          height="200"
-        />
+      <img class="picture" src="Jackpic.jpg" alt="A picture of Jack" />
+      <div class="menudiv">
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Sections</a>
+              <ul>
+                <li>Contact</li>
+                <li>Employment History</li>
+                <li>Education</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+              <ul>
+                <li>Telephone</li>
+                <li>Email</li>
+                <li>
+                  <a href="#">Socials</a>
+                  <ul>
+                    <li>Instagram</li>
+                    <li>Linkedin</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <section class="employmentparent">
-        <h2>Employment History</h2>
-        <p class="employmentp">
-          Please find below my employment history for the last decade.
-          References are available upon request.
-        </p>
-        <ol class="employmentlist" style="list-style-type: square">
-          <li>Zuto - Dealer Compliance - 2014-2016</li>
-          <li>Full time Carer - 2016-2017</li>
-          <li>The E-Cig Store - Area Manager - 2017-2020</li>
-          <li>Self Employed - Landlord/Estate Management - 2020-Present</li>
-        </ol>
-      </section>
-      <section class="educationparent">
-        <h2>Education</h2>
-        <ol class="educationlist" style="list-style-type: none">
-          <li>Degree - Liverpool Institute for Performing Arts - 2:2</li>
-          <li>
-            Btec Level 3 - The Manchester College - Distinction, Distinction,
-            Merit
-          </li>
-          <li>GCSE's - Macclesfield High School - 4 A's, 5 B's, 2 C's</li>
-        </ol>
-      </section>
+    </header>
+    <main>
+      <div class="arrange">
+        <div class="container">
+          <h2>Contact details</h2>
+          <ul>
+            <li>07898819714</li>
+            <li>Jackdanielberry@gmail.com</li>
+            <li>
+              The Cottage<br />
+              72 Byrons Lane<br />
+              Macclesfield<br />
+              Cheshire<br />
+              SK117JS
+            </li>
+            <li>02/09/1991</li>
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Employment History</h2>
+          <p>
+            Please find below my employment history for the last decade.
+            References are available upon request.
+          </p>
+          <ul>
+            <li>Zuto - Dealer Compliance - 2014-2016</li>
+            <li>Full time Carer - 2016-2017</li>
+            <li>The E-Cig Store - Area Manager - 2017-2020</li>
+            <li>Self Employed - Landlord/Estate Management - 2020-Present</li>
+          </ul>
+        </div>
+        <div class="container">
+          <h2>Education</h2>
+          <ul>
+            <li>Degree - Liverpool Institute for Performing Arts - 2:2</li>
+            <li>
+              Btec Level 3 - The Manchester College - Distinction, Distinction,
+              Merit
+            </li>
+            <li>GCSE's - Macclesfield High School - 4 A's, 5 B's, 2 C's</li>
+          </ul>
+        </div>
+      </div>
     </main>
   </body>
 </html>
