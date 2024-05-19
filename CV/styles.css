@@ -3,20 +3,26 @@ body {
   height: 1000px;
   font-family: "Oswald", "Times New Roman", Times, serif;
 }
+ul {
+  padding: 0;
+  margin: 0;
+}
 header {
-  /* will become a nav bar for contact shortcuts */
-  /* background-color: aqua; */
   position: relative;
+
+  border-bottom: solid 2px white;
+  border-radius: 10px;
+}
+.header-container {
   top: 5px;
   left: 5px;
   padding: 20px;
   height: 200px;
-  /* max-width: 70%; */
-  margin: auto;
-  /* position: fixed; */
+  margin-bottom: 50px;
   display: flex;
-  justify-content: space-between;
-  border-bottom: solid 2px white;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 2;
 }
 h1 {
   width: 80%;
@@ -27,14 +33,15 @@ h1 {
 .picture {
   height: 200px;
   align-self: flex-end;
+  border-radius: 20px;
 }
 .menudiv {
-  /* background-color: blue; */
   position: absolute;
   background-color: rgb(90, 119, 155);
   bottom: 0px;
   height: 50px;
-  width: 80%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 a {
@@ -44,54 +51,85 @@ a {
   line-height: 50px;
 }
 
+/* //
+
+NAV STUFF
+
+// */
+
 nav a {
   display: block;
 }
 
+.burger {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+}
+.burger img {
+  height: 50px;
+  width: 50px;
+}
+
+.burger:hover + ul,
+.burger:focus-within + ul {
+  transform: translateX(0);
+  /* background-color: aqua; */
+}
+
+/* Top level, whole row */
 nav ul {
   position: relative;
+  width: 100%;
+  list-style: none;
+  list-style-type: none;
   margin: 0;
   top: 0;
+  border-top: solid 2px white;
+  border-radius: 10px;
+  transform: translateX(-120%);
+  transition: all 0.4s ease-in-out;
 }
 
+/* Top level, individual options */
 nav ul li {
   display: inline-block;
-  list-style: none;
-  top: 0;
   padding: 0;
-  line-height: 20px;
+  line-height: 50px;
+  margin-left: 20%;
+  width: 25%;
+  text-align: center;
 }
 
+/* Second level, whole row */
 nav ul ul {
-  display: none;
+  opacity: 0%;
+  width: 70%;
   color: white;
   background-color: rgb(90, 119, 155);
-  /* background-color: aqua; */
   position: absolute;
   top: 50px;
+  left: 15%;
+  border-radius: 10px;
+  border-bottom: solid 2px white;
+  transform: translateX(0);
 }
 
+/* Second level, individual options */
 nav ul ul li {
-  position: absolute;
-  display: list-item;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-evenly; */
-  list-style: none;
-  line-height: 40px;
-  /* padding-left: 25px; */
-  padding-right: 25px;
+  margin: auto;
+  margin-right: 20px;
 }
 
+/* hover dropdown */
 nav ul li:focus-within > ul,
 nav ul li:hover > ul {
-  display: inherit;
+  opacity: 100%;
 }
 
 .arrange {
   display: flex;
   flex-direction: column;
-  justify-content: spa;
   flex-wrap: wrap;
 }
 .container {
@@ -115,11 +153,21 @@ nav ul li:hover > ul {
   .container {
     width: 50%;
   }
+  nav ul {
+    transform: translateX(0);
+  }
+  .burger {
+    display: none;
+  }
 }
 
 @media (min-width: 1000px) {
   .container {
     width: 33%;
     text-align: left;
+  }
+  nav ul li {
+    margin-left: 30%;
+    width: 100px;
   }
 }
